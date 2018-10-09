@@ -1,0 +1,56 @@
+{
+  "name": "go-fly-first",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=10.7.0",
+    "npm": ">=6.4.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "connect-pg-simple": "^5.0.0",
+    "connect-session-sequelize": "^5.2.2",
+    "cookie-parser": "~1.4.3",
+    "date-and-time": "^0.6.2",
+    "dateformat": "^3.0.3",
+    "debug": "^3.2.5",
+    "ejs": "^2.6.1",
+    "ejs-compiled-loader": "^1.1.0",
+    "email-templates": "^5.0.1",
+    "express": "^4.16.3",
+    "express-back": "0.0.2",
+    "express-ejs-layouts": "^2.5.0",
+    "express-myconnection": "^1.0.4",
+    "express-sequelize-session": "^0.4.0",
+    "express-session": "^1.15.6",
+    "express-session-sequelize": "^1.1.0",
+    "express-validator": "^5.3.0",
+    "fs": "0.0.1-security",
+    "hogan.js": "^3.0.2",
+    "morgan": "^1.9.1",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "pdfkit": "^0.8.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.1",
+    "sequelize-cli": "^4.1.1",
+    "sequelize-session-store": "^0.1.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@lab.digifutura.com:digifutura_internal/go-fly-first.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

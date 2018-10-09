@@ -1,0 +1,29 @@
+   
+   <table>
+        <tr>
+            <th> From </th>
+            <th> To </th>
+            <th> Depart </th>
+            <th> Return </th>
+            <th> Passenger </th>
+            <th> Full Name</th>
+            <th> Email</th>
+            <th> SalesAgent </th>
+        </tr>   
+        <% for(var i=0; i <leads.length ; i++) { %>  
+            <tr>
+                <td><%= leads[i].from %></td>
+                <td><%= leads[i].to %></td>
+                <td><%= leads[i].depart %></td>
+                <td><%= leads[i].dreturn %></td>
+                <td><%= leads[i].passengers %></td>
+                <td><%= leads[i].fullname %></td>
+                <td><%= leads[i].email %></td>
+                <td> <%=leads[i]['PreSalesAgent.Name']%> </td>
+
+            </tr>
+            <% } %>
+    </table>
+     
+        
+                

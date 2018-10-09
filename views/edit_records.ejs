@@ -1,0 +1,29 @@
+   
+   <table>
+        <tr>
+            <th> From </th>
+            <th> To </th>
+            <th> Depart </th>
+            <th> Return </th>
+            <th> Passenger </th>
+            <th> Full Name</th>
+            <th> Email</th>
+            <th> Edit </th>
+            <th> Delete</th>
+        </tr>   
+            <% for(var i=0; i < todos.length; i++) { %>
+            <tr>
+                <td><%= todos[i].from %></td>
+                <td><%= todos[i].to %></td>
+                <td><%= todos[i].depart %></td>
+                <td><%= todos[i].dreturn %></td>
+                <td><%= todos[i].passengers %></td>
+                <td><%= todos[i].fullname %></td>
+                <td><%= todos[i].email %></td>
+                <td><a href="/admin/edit_lead/<%= todos[i].id %>" data-method="PUT"> <i class="fa fa-pencil" aria-hidden="true"></i></a> </td>
+                <td><a href="/admin/delete_lead/<%= todos[i].id %>" data-method="DELETE"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> </td>
+            </tr>
+            <% } %>
+    </table>
+   
+    

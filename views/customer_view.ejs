@@ -1,0 +1,85 @@
+<div class="view-customer-box">
+        <img src="/images/goflyfirst-logo.svg" alt="" style="width:290px;">
+        <hr />
+        <!-- <div class="container"> -->
+                <% for(var i=0; i < todos.length; i++) { %>
+            <div class="row">
+                <div class="col-md-4 view-space">
+                    <h3><strong> Booking Refrence :</strong> </h3>
+                </div>
+                <div class="col-md-8 view-space">
+                    <h3> MKS1C1</h3>
+                </div>
+                <div class="col-md-4 view-space">
+                    <h3><strong> Trip information :</strong> </h3>
+                </div>
+                <div class="col-md-8 view-space">
+                    <h3><%= todos[i].depart %> | <%= todos[i].from %> to <%= todos[i].to %> </h3>
+                </div>
+                <div class="col-md-4 view-space">
+                    <h3><strong> Trip Duration :</strong> </h3>
+                </div>
+                <div class="col-md-8 view-space">
+                    <h3>10h 35m</h3>
+                </div>
+                <div class="col-md-4 view-space">
+                    <h3><strong> E-Ticket #:</strong> </h3>
+                </div>
+                <div class="col-md-8 view-space">
+                    <h3><%= todos[i].fullname %></h3>
+                </div>
+            </div>
+        <!-- </div> -->
+        <div class="view-table">
+            <div class="row ">
+                <div class="col-md-5 view-space">
+                        <img src="/images/airindia.png" alt="" style="width:165px;">
+                </div>
+                <div class="col-md-7 view-space">
+                        <h3> OUTBOUNT FLIGHT </h3>
+                </div>
+                <div class="col-md-12 view-space">
+                        <h3> <%= todos[i].from %> to <%= todos[i].to %> </h3>
+                        <h3> <%= todos[i].depart %> </h3>
+                </div>
+            </div>
+            <table class="view-space">
+                <tr>
+                        <th> DEPARTURE</th>
+                        <th> FLIGHT INFORMATION</th>
+                </tr>
+                <tr>
+                    <td> <%= todos[i].from %> <br>
+                         <%= todos[i].depart %>
+                     </td>
+                    <td> <strong> Flight #: </strong> IN 901 <br />
+                        <strong> Duration: </strong> 10hr 35min <br />
+                        <strong> Cabin: </strong> Business Class <br />
+                        <strong> Aircraft: </strong> AIRINDIA 777-303 <br />
+                    </td>
+                </tr>
+          
+                    <tr>
+                            <th> ARRIVAL</th>
+                            <th> SEAT INFORMATION</th>
+                    </tr>
+                    <tr>
+                        <td> <%= todos[i].to %> <br>
+                             <%= todos[i].dreturn %>
+                         </td>
+                        <td> 
+                                <h3><%= todos[i].fullname %></h3>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+        <% if (todos[i].send_quote == false) { %>
+            
+        <% } else if(todos[i].send_quote == true && todos[i].approved_quote == true) { %>
+            <button type="button" class="btn btn-primary" ><a href="/customer/approved_lead/<%= todos[i].id %>" data-method="PUT" style="color:white"> Approved </a></button> 
+            <% } else{ %> 
+            <button type="button" class="btn btn-primary" ><a href="/customer/approved_lead/<%= todos[i].id %>" data-method="PUT" style="color:white"> Approve Quote</a></button>
+            <% } %>
+
+        <% } %>
+</div>
